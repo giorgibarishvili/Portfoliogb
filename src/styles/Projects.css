@@ -1,0 +1,17 @@
+.projects {
+  max-width: 1000px;
+}
+.image-gallery-item {
+  display: flex;
+  align-items: center;
+}
+
+.image-gallery-description {
+  margin-left: 20px;
+  max-width: 900px;
+}
+.image-gallery-item img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}

@@ -1,0 +1,9 @@
+.appear-green {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #63ADF2;
+  z-index: 20;
+}

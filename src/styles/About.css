@@ -1,0 +1,14 @@
+.about-me {
+  justify-content: space-between;
+  font-size: 20px;
+  font-style: italic;
+}
+.information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ragaca-span {
+  max-width: 900px;
+}

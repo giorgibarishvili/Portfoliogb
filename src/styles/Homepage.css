@@ -1,0 +1,206 @@
+.main {
+  padding: 0;
+}
+.who-am-i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homeimg {
+  position: relative;
+  min-width: 150px;
+  max-width: 600px;
+}
+
+.ink-stain {
+  display: none;
+}
+
+.programmer {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mask: url(../images/ink-stain-2.png) no-repeat center/contain;
+  -webkit-mask: url(../images/ink-stain-2.png) no-repeat center/contain;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  width: 400px;
+  height: 200px !important;
+}
+
+
+
+.modal-text {
+  display: flex;
+  color: #424244;
+  text-align: center;
+  font-family: FiraGO;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 22px;
+}
+.no-btn {
+  width: 146px;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid #163165;
+  background: #fff;
+  color: #163165;
+  font-feature-settings: "case" on;
+  font-family: FiraGO;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  @media screen and (max-width: 768px) {
+    width: 130px;
+  }
+}
+.yes-btn {
+  width: 146px;
+  height: 46px;
+  border-radius: 10px;
+  background: #163165;
+  color: #fff;
+  font-feature-settings: "case" on;
+  font-family: FiraGO;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border: none;
+  @media screen and (max-width: 768px) {
+    width: 130px;
+  }
+}
+.modal-content {
+  max-width: 954px;
+  max-height: 539px;
+  border-radius: 10px;
+  border: 1px solid #b8b8b8;
+  background: #fff;
+  box-shadow: 3px 4px 10px 0px rgba(219, 219, 219, 0.25);
+  color: #424244;
+  font-family: FiraGO;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  max-height: 550px !important;
+}
+.corp-modal-x {
+  right: 0.7rem;
+  background: transparent;
+  border: none;
+  position: absolute;
+  /* padding: 0; */
+  /* cursor: pointer; */
+}
+/* 
+.corp-modal-x svg {
+  display: block;
+} */
+.ab-portfolio {
+  text-align: left;
+  text-indent: 10px;
+}
+.frameworks-list li {
+  list-style: none;
+  border: 1px solid rgb(94, 88, 88);
+  border-radius: 50px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px 5px 1px rgb(51, 47, 47);
+}
+/* .morph-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px 1px rgba(59, 101, 129, 0.9);
+}
+
+.morph-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/GeorgiaFlag.svg");
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.morph-btn:hover::after {
+  opacity: 0.3;
+} */
+.morph-btn {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 50px;
+  box-shadow: 5px 5px 5px 1px rgba(59, 101, 129, 0.9);
+  transition: transform 0.3s ease-in-out;
+}
+
+.morph-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/GeorgiaFlag.svg");
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.morph-btn:hover::after {
+  opacity: 0.3;
+}
+
+.morph-btn:active,
+.morph-btn:hover {
+  transform: scale(0.95);
+}
+/* AQ GAVCHERDI */
+@media screen and (max-width: 768px) {
+  .modal-div, .form {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 375px) {
+  .form-floating, .input-field {
+    width: 190px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .form-floating {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 425px) and (max-width: 768px) {
+  .form-floating {
+    width: 325px;
+  }
+}

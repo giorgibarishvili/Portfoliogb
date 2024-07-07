@@ -1,0 +1,15 @@
+{
+  "language": "Lang",
+  "greetings": "Hi, I am Giorgi Barishvili.",
+  "description": "A Front-End Developer who is passionate about building user friendly interfaces for the web.",
+  "messageMe": "Message me any time!",
+  "myMail": "My Email is: ",
+  "nameInput": "Your name",
+  "emailInput": "Your email",
+  "textInput": "Enter text",
+  "mandatory": "This field is mandatory",
+  "home": "home",
+  "about": "About",
+  "aboutMe": "About Me",
+  "projects": "Projects"
+}

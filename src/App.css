@@ -1,0 +1,9 @@
+body {
+  background-color: var(--color-background);
+  font-family: "Nova Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+div > *:not(::placeholder) {
+  color: var(--color-text);
+}

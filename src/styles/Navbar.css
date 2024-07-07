@@ -1,0 +1,237 @@
+/*
+red: #ec6b5b 
+dark: 3a3f59
+orange: #f9ad66
+light: ede6ce
+*/
+.navbar {
+  background: rgba(43, 72, 114, 1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 50px rgba(43, 72, 114, 1);
+  height: 90px;
+  display: flex;
+  /* justify-content: space-between; */
+  /* justify-content: center; */
+  align-items: center;
+  font-size: 1.2rem;
+  position: relative;
+  top: 0;
+  z-index: 999;
+  color: black;
+}
+.github-link svg {
+  width: 48px;
+  height: 48px;
+  aspect-ratio: 1;
+  outline: 30px solid rgba(0, 0, 0, 0.5);
+  outline-offset: -30px;
+  cursor: pointer;
+  transition: outline 0.3s, outline-offset 0.3s;
+  border-radius: 50px;
+
+  @media screen and (min-width: 940px) and (max-width: 1200px) {
+    width: 36px;
+    height: 36px;
+    outline: 23px solid rgba(0, 0, 0, 0.5);
+    outline-offset: -23px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 940px) {
+    width: 24px;
+    height: 24px;
+    outline: 15px solid rgba(0, 0, 0, 0.5);
+    outline-offset: -15px;
+  }
+}
+
+.github-link svg:hover {
+  outline: 8px solid rgb(255, 255, 255);
+  outline-offset: 5px;
+  @media screen and (min-width: 940px) and (max-width: 1200px) {
+    outline: 6px solid rgb(255, 255, 255);
+    outline-offset: 4px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 940px) {
+    outline: 5px solid rgb(255, 255, 255);
+    outline-offset: 3px;
+  }
+}
+.dropdown {
+  float: left;
+  .possition-right {
+    margin-left: 306px;
+    height: 223px;
+    box-shadow: none !important;
+  }
+}
+
+.dropdown .dropbtn {
+  border: none;
+  font-feature-settings: "case" !important;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.dropdown-content {
+  display: block !important;
+  position: absolute !important;
+  background-color: white;
+  min-width: 336px;
+  margin-top: 10px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.dropdown-content a {
+  float: none !important;
+  color: black;
+  text-decoration: none;
+  display: block !important;
+  text-align: left;
+  padding: 16px 30px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  &:hover {
+    color: #ffc93c !important;
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block !important;
+  overflow: visible;
+}
+.dropdown img {
+  width: 40px;
+  @media screen and (min-width: 768px) and (max-width: 940px) {
+    width: 30px;
+  }
+}
+.dropbtn {
+  @media screen and (min-width: 768px) and (max-width: 940px) {
+    font-size: 15px;
+  }
+}
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-icon {
+    background-color: rgba(250, 246, 221, 0);
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    backdrop-filter: blur(1px);
+    display: grid;
+    /* display: block; */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: rgba(43, 72, 114, 1);
+    transition: left 0.3s ease;
+    padding-top: 100px;
+    justify-content: space-around;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-menu .ms-5,
+  .nav-menu .asd {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .nav-menu .ms-5 a,
+  .nav-menu .ms-5 div,
+  .nav-menu .asd a {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .nav-menu .asd {
+    margin-bottom: 20px;
+  }
+}
+
+/* AASDASDASDASD */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
