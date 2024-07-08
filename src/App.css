@@ -3,7 +3,9 @@ body {
   font-family: "Nova Mono", monospace;
   font-weight: 600;
   font-style: normal;
-}
-div > *:not(::placeholder) {
   color: var(--color-text);
+}
+.form-control,
+.form-floating {
+  color: #212529;
 }

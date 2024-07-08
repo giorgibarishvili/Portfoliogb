@@ -9,7 +9,9 @@ import Georgian from "../images/GeorgiaFlag.svg";
 import Kingdom from "../images/UnitedKingdomFlag.svg";
 import { ReactComponent as DownArrow } from "../images/chevron-down.svg";
 import { ReactComponent as BurgerMenu } from "../images/bars-solid.svg";
+import { ReactComponent as BurgerMenuWhite } from "../images/bars-white.svg";
 import { ReactComponent as CloseMark } from "../images/xmark-solid.svg";
+import { ReactComponent as CloseMarkWhite } from "../images/xmark-white.svg";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
@@ -22,10 +24,10 @@ function Navbar() {
   const [activeButton, setActiveButton] = useState("");
   const [showLang, setShowLang] = useState(false);
   const [sideBar, setSideBar] = useState(false);
-  const [ragaca, setragaca] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  function setDarkMode() {
-    if (ragaca) {
+  function DarkMode() {
+    if (darkMode) {
       document.querySelector("body").setAttribute("data-theme", "light");
     } else {
       document.querySelector("body").setAttribute("data-theme", "dark");
@@ -92,18 +94,28 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <div className="row">
       <div
         className="menu-icon"
         onClick={() => setSideBar(!sideBar)}
         ref={sideBarRef}
       >
-        {sideBar ? <CloseMark /> : <BurgerMenu />}
+        {sideBar ? (
+          darkMode ? (
+            <CloseMarkWhite />
+          ) : (
+            <CloseMark />
+          )
+        ) : darkMode ? (
+          <BurgerMenuWhite />
+        ) : (
+          <BurgerMenu />
+        )}
       </div>
       <div
         className={`nav-menu${sideBar ? " active" : ""} navbar container-fluid`}
       >
-        <div className="ms-5">
+        <div className="ms-md-5 col-xl-8">
           <Link onClick={closeSideBar} to="/" className="">
             <Button
               className={`me-3 ${activeButton === "home" ? "active" : ""}`}
@@ -136,20 +148,35 @@ function Navbar() {
             <Button>CV</Button>
           </a>
         </div>
-        <div className="asd me-md-5">
-          <label class="switch">
+        <div className="nav-links me-md-5 col-md-3 d-flex justify-content-center align-items-center">
+          <div class="form-check form-switch">
+            <input
+              className="form-check-input me-md-3"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              onClick={() => {
+                setDarkMode(!darkMode);
+                DarkMode();
+              }}
+            />
+          </div>
+            {/* <label class="form-check-label" for="flexSwitchCheckChecked">
+            Dark mode
+            </label> */}
+          {/* <label class="switch">
             <input
               type="checkbox"
               onClick={() => {
-                setragaca(!ragaca);
-                setDarkMode();
+                setDarkMode(!darkMode);
+                DarkMode();
               }}
             />
             <span class="slider round"></span>
-          </label>
+          </label> */}
           <div className="dropdown" ref={dropdownRef}>
             <button
-              className="dropbtn"
+              className="dropbtn d-flex"
               onClick={() => setShowLang((item) => !item)}
             >
               <img
@@ -187,7 +214,7 @@ function Navbar() {
             href="https://github.com/giorgibarishvili"
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link ms-3"
+            className="github-link ms-md-2"
           >
             <GithubLogo />
           </a>
@@ -195,7 +222,7 @@ function Navbar() {
             href="https://www.linkedin.com/in/giorgi-b-125912ba/"
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link ms-md-5"
+            className="github-link ms-md-4"
           >
             <Linkedin />
           </a>

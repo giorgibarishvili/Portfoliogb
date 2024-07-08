@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import {
   BrowserRouter as Router,
   Route,
@@ -44,14 +43,6 @@ function App() {
         theme="light"
         transition={Bounce}
       />
-      {/* <Routes>
-          <Route path="/" exact Component={HomePage} />
-          <Route path="/About" Component={About}/>
-        </Routes> */}
-      {/* <HomePage /> */}
-      {/* <Switch>
-          <Route />
-        </Switch> */}
     </Router>
   );
 }

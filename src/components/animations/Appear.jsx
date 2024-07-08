@@ -1,6 +1,6 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-import "./Animations.css"
+import "./Animations.css";
 
 const Appear = ({ children, width = "fit-content" }) => {
   const ref = useRef(null);
@@ -34,7 +34,7 @@ const Appear = ({ children, width = "fit-content" }) => {
         initial={"initial"}
         animate={slideControls}
         transition={{ duration: 0.5, ease: "easeIn" }}
-        className="appear-green"
+        className="appear-skyblue"
       />
     </div>
   );
