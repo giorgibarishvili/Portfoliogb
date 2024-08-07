@@ -19,8 +19,11 @@ function Navbar() {
   const location = useLocation();
   const dropdownRef = useRef(null);
   const sideBarRef = useRef(null);
+  const darkModeSwitchRef = useRef(null);
+  const githubLinkRef = useRef(null);
+  const linkedinLinkRef = useRef(null);
 
-  const [lang, setLang] = useState("en");
+  const [lang, setLang] = useState("ka");
   const [activeButton, setActiveButton] = useState("");
   const [showLang, setShowLang] = useState(false);
   const [sideBar, setSideBar] = useState(false);
@@ -65,10 +68,14 @@ function Navbar() {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowLang(false);
-      }
-      if (sideBarRef.current && !sideBarRef.current.contains(event.target)) {
+      if (
+        sideBarRef.current &&
+        !sideBarRef.current.contains(event.target) &&
+        !dropdownRef.current.contains(event.target) &&
+        !darkModeSwitchRef.current.contains(event.target) &&
+        !githubLinkRef.current.contains(event.target) &&
+        !linkedinLinkRef.current.contains(event.target)
+      ) {
         setSideBar(false);
       }
     };
@@ -77,7 +84,14 @@ function Navbar() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdownRef, sideBarRef]);
+  }, [
+    dropdownRef,
+    sideBarRef,
+    darkModeSwitchRef,
+    githubLinkRef,
+    linkedinLinkRef,
+    sideBar,
+  ]);
   useEffect(() => {
     if (sideBar) {
       document.body.style.overflow = "hidden";
@@ -94,7 +108,7 @@ function Navbar() {
   };
 
   return (
-    <div className="row">
+    <div className="">
       <div
         className="menu-icon"
         onClick={() => setSideBar(!sideBar)}
@@ -114,42 +128,84 @@ function Navbar() {
       </div>
       <div
         className={`nav-menu${sideBar ? " active" : ""} navbar container-fluid`}
+        ref={sideBarRef}
       >
-        <div className="ms-md-5 col-xl-8">
-          <Link onClick={closeSideBar} to="/" className="">
-            <Button
-              className={`me-3 ${activeButton === "home" ? "active" : ""}`}
-              onClick={() => handleButtonClick("home")}
+        {!sideBar && (
+          <div className="nav-div ms-md-5 col-xl-8">
+            <Link className="nav-item" onClick={closeSideBar} to="/">
+              <Button
+                className={`me-3 ${activeButton === "home" ? "active" : ""}`}
+                onClick={() => handleButtonClick("home")}
+              >
+                {t("home")}
+              </Button>
+            </Link>
+            <Link className="nav-item" onClick={closeSideBar} to="/About">
+              <Button
+                className={`me-3 ${activeButton === "about" ? "active" : ""}`}
+                onClick={() => handleButtonClick("about")}
+              >
+                {t("about")}
+              </Button>
+            </Link>
+            <Link className="nav-item" onClick={closeSideBar} to="/Projects">
+              <Button
+                className={`me-3 ${
+                  activeButton === "projects" ? "active" : ""
+                }`}
+                onClick={() => handleButtonClick("projects")}
+              >
+                {t("projects")}
+              </Button>
+            </Link>
+            <a
+              className="nav-item"
+              href="portfolio/src/images/Giorgi Barishvili.pdf"
+              download="Giorgi Barishvili CV"
+              target="_blank"
             >
-              {t("home")}
-            </Button>
-          </Link>
-          <Link onClick={closeSideBar} to="/About">
-            <Button
-              className={`me-3 ${activeButton === "about" ? "active" : ""}`}
-              onClick={() => handleButtonClick("about")}
+              <Button>CV</Button>
+            </a>
+          </div>
+        )}
+        {sideBar && (
+          <div className="nav-mobile ms-lg-5 col-xl-8">
+            <Link className="nav-item" onClick={closeSideBar} to="/">
+              <button
+                className="me-3 mobile-btn"
+                onClick={() => handleButtonClick("home")}
+              >
+                {t("home")}
+              </button>
+            </Link>
+            <Link className="nav-item" onClick={closeSideBar} to="/About">
+              <button
+                className="me-3 mobile-btn"
+                onClick={() => handleButtonClick("about")}
+              >
+                {t("about")}
+              </button>
+            </Link>
+            <Link className="nav-item" onClick={closeSideBar} to="/Projects">
+              <button
+                className="me-3 mobile-btn"
+                onClick={() => handleButtonClick("projects")}
+              >
+                {t("projects")}
+              </button>
+            </Link>
+            <a
+              className="nav-item"
+              href="portfolio/src/images/Giorgi Barishvili.pdf"
+              download="Giorgi Barishvili CV"
+              target="_blank"
             >
-              {t("about")}
-            </Button>
-          </Link>
-          <Link onClick={closeSideBar} to="/Projects">
-            <Button
-              className={`me-3 ${activeButton === "projects" ? "active" : ""}`}
-              onClick={() => handleButtonClick("projects")}
-            >
-              {t("projects")}
-            </Button>
-          </Link>
-          <a
-            href="portfolio/src/images/Giorgi Barishvili.pdf"
-            download="Giorgi Barishvili CV"
-            target="_blank"
-          >
-            <Button>CV</Button>
-          </a>
-        </div>
-        <div className="nav-links me-md-5 col-md-3 d-flex justify-content-center align-items-center">
-          <div class="form-check form-switch">
+              <button className="mobile-btn">CV</button>
+            </a>
+          </div>
+        )}
+        <div className="nav-links me-lg-5 col-md-3 d-flex justify-content-center align-items-center">
+          <div class="form-check form-switch" ref={darkModeSwitchRef}>
             <input
               className="form-check-input me-md-3"
               type="checkbox"
@@ -161,22 +217,9 @@ function Navbar() {
               }}
             />
           </div>
-            {/* <label class="form-check-label" for="flexSwitchCheckChecked">
-            Dark mode
-            </label> */}
-          {/* <label class="switch">
-            <input
-              type="checkbox"
-              onClick={() => {
-                setDarkMode(!darkMode);
-                DarkMode();
-              }}
-            />
-            <span class="slider round"></span>
-          </label> */}
           <div className="dropdown" ref={dropdownRef}>
             <button
-              className="dropbtn d-flex"
+              className="dropbtn d-flex align-items-center"
               onClick={() => setShowLang((item) => !item)}
             >
               <img
@@ -214,7 +257,8 @@ function Navbar() {
             href="https://github.com/giorgibarishvili"
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link ms-md-2"
+            className="github-link ms-lg-2"
+            ref={githubLinkRef}
           >
             <GithubLogo />
           </a>
@@ -222,7 +266,8 @@ function Navbar() {
             href="https://www.linkedin.com/in/giorgi-b-125912ba/"
             target="_blank"
             rel="noopener noreferrer"
-            className="github-link ms-md-4"
+            className="github-link ms-lg-4"
+            ref={linkedinLinkRef}
           >
             <Linkedin />
           </a>

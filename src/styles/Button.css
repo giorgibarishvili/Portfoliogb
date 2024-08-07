@@ -9,9 +9,7 @@
   padding: 10px 10px;
   transition: 0.5s;
   width: 175px;
-  border-radius: 50px; /*mrgvali*/
-  /* border: none;
-    cursor: pointer; */
+  border-radius: 50px;
   @media screen and (min-width: 940px) and (max-width: 1200px) {
     width: 125px;
     font-size: 0.7em;
@@ -37,7 +35,7 @@
 }
 
 .btn-default::before {
-  border-radius: 50px; /*mrgvali*/
+  border-radius: 50px;
   content: "";
   position: absolute;
   inset: 2px;

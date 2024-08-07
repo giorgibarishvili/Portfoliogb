@@ -28,29 +28,28 @@ light: ede6ce
   cursor: pointer;
   transition: outline 0.3s, outline-offset 0.3s;
   border-radius: 50px;
-
-  @media screen and (min-width: 940px) and (max-width: 1200px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .github-link svg {
     width: 36px;
     height: 36px;
     outline: 23px solid rgba(0, 0, 0, 0.5);
     outline-offset: -23px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 940px) {
-    width: 24px;
-    height: 24px;
-    outline: 15px solid rgba(0, 0, 0, 0.5);
-    outline-offset: -15px;
   }
 }
 
 .github-link svg:hover {
   outline: 8px solid rgb(255, 255, 255);
   outline-offset: 5px;
-  @media screen and (min-width: 940px) and (max-width: 1200px) {
+}
+@media screen and (min-width: 940px) and (max-width: 1200px) {
+  .github-link svg:hover {
     outline: 6px solid rgb(255, 255, 255);
     outline-offset: 4px;
   }
-  @media screen and (min-width: 768px) and (max-width: 940px) {
+}
+@media screen and (min-width: 768px) and (max-width: 940px) {
+  .github-link svg:hover {
     outline: 5px solid rgb(255, 255, 255);
     outline-offset: 3px;
   }
@@ -119,7 +118,50 @@ light: ede6ce
   display: none;
 }
 
+.form-switch .form-check-input {
+  background-image: var(--bg-image-default);
+  width: 70px;
+  height: 30px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.form-switch .form-check-input:not(:checked) {
+  --bg-image-default: url("../images/sun-solid.svg");
+  background-image: var(--bg-image-default),
+    linear-gradient(
+      90deg,
+      rgba(128, 121, 240, 1) 0%,
+      rgba(248, 121, 43, 1) 100%
+    );
+}
+
+.form-switch .form-check-input:checked {
+  --bg-image-default: url("../images/moon-solid.svg");
+  background-image: var(--bg-image-default),
+    linear-gradient(
+      90deg,
+      rgba(128, 121, 240, 1) 0%,
+      rgba(248, 121, 43, 1) 100%
+    );
+}
+
+.form-switch .form-check-input:focus {
+  background-image: var(--bg-image-default),
+    linear-gradient(
+      90deg,
+      rgba(128, 121, 240, 1) 0%,
+      rgba(248, 121, 43, 1) 100%
+    );
+  box-shadow: none;
+}
+.nav-mobile {
+  display: none;
+}
 @media screen and (max-width: 768px) {
+  .nav-div {
+    display: none;
+  }
   .menu-icon {
     background-color: rgba(250, 246, 221, 0);
     width: 35px;
@@ -161,52 +203,83 @@ light: ede6ce
   .nav-menu .ms-5,
   .nav-menu .nav-links {
     flex-direction: column;
-    align-items: flex-start;
     margin-left: 0;
   }
 
+  .nav-menu .nav-links,
   .nav-menu .ms-5 a,
   .nav-menu .ms-5 div,
-  .nav-menu .nav-links a {
-    margin-left: 20px;
+  .nav-menu .nav-links a,
+  .form-switch,
+  .dropdown {
     margin-bottom: 20px;
   }
-
-  .nav-menu .nav-links {
-    margin-bottom: 20px;
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
-.form-switch .form-check-input {
-  background-image: var(--bg-image-default);
-  width: 70px;
-  height: 30px;
-  background-repeat: no-repeat;
-}
+  .nav-item {
+    border-bottom: 2px solid transparent;
+    height: 80px;
+    width: 60%;
+    text-decoration: none;
+  }
+  .mobile-btn {
+    color: #faf6dd;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+  }
+  .mobile-btn:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 
-.form-switch .form-check-input:not(:checked) {
-  --bg-image-default: url("../images/sun-solid.svg");
-  background-image: var(--bg-image-default), linear-gradient(
-    90deg,
-    rgba(128, 121, 240, 1) 0%,
-    rgba(248, 121, 43, 1) 100%
-  );
-}
+  .mobile-btn:before,
+  .mobile-btn:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    background: #fff;
+  }
 
-.form-switch .form-check-input:checked {
-  --bg-image-default: url("../images/moon-solid.svg");
-  background-image: var(--bg-image-default), linear-gradient(
-    90deg,
-    rgba(128, 121, 240, 1) 0%,
-    rgba(248, 121, 43, 1) 100%
-  );
-}
+  .mobile-btn:before {
+    left: 0;
+  }
+  .mobile-btn:after {
+    right: 0;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
 
-.form-switch .form-check-input:focus {
-  background-image: var(--bg-image-default), linear-gradient(
-    90deg,
-    rgba(128, 121, 240, 1) 0%,
-    rgba(248, 121, 43, 1) 100%
-  );
+  .mobile-btn:hover:before {
+    background: #fff;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .mobile-btn:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+  .github-link svg {
+    width: 36px;
+    height: 36px;
+    outline: 23px solid rgba(0, 0, 0, 0.5);
+    outline-offset: -23px;
+  }
 }
 
 /*aq gavcherdi*/

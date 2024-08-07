@@ -130,11 +130,11 @@ function HomePage() {
                   <li>React.js</li>
                   <li>Redux</li>
                   <li>bootstrap</li>
-                  <li>react-router-dom</li>
+                  <li>router-dom</li>
                   <li>I18N</li>
-                  <li>react-awesome-reveal</li>
+                  <li>awesome-reveal</li>
                   <li>framer-motion</li>
-                  <li>embla-carousel-react</li>
+                  <li>embla-carousel</li>
                 </ul>
               </div>
               {/* <div className="mx-auto mt-5 mb-3 d-flex justify-content-center">
@@ -183,7 +183,6 @@ function HomePage() {
                 value={userName}
                 placeholder=""
                 onChange={(e) => setUserName(e.target.value)}
-                // onBlur={() => setUserNameTouched(true)}
                 autoComplete="off"
                 required
               />
@@ -207,7 +206,6 @@ function HomePage() {
                 value={eMail}
                 placeholder=""
                 onChange={(e) => setEMail(e.target.value)}
-                // onBlur={() => setEmailTouched(true)}
                 autoComplete="off"
                 required
               />
@@ -229,7 +227,6 @@ function HomePage() {
                 placeholder=""
                 value={messageBox}
                 onChange={(e) => setMessageBox(e.target.value)}
-                // onBlur={() => setMessageBoxTouched(true)}
                 required
               ></textarea>
               <label htmlFor="floatingInput">{t("textInput")}</label>
@@ -243,7 +240,6 @@ function HomePage() {
           <button
             className="mb-5 morph-btn"
             type="submit"
-            // disabled={!eMail || !userName || !messageBox}
             onClick={fromSubmited}
           >
             {isLoading ? (
