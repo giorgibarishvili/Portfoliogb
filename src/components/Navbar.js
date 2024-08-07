@@ -158,12 +158,7 @@ function Navbar() {
                 {t("projects")}
               </Button>
             </Link>
-            <a
-              className="nav-item"
-              href="portfolio/src/images/Giorgi Barishvili.pdf"
-              download="Giorgi Barishvili CV"
-              target="_blank"
-            >
+            <a className="nav-item" href="Giorgi_Barishvili_CV.pdf" download>
               <Button>CV</Button>
             </a>
           </div>
@@ -194,18 +189,13 @@ function Navbar() {
                 {t("projects")}
               </button>
             </Link>
-            <a
-              className="nav-item"
-              href="portfolio/src/images/Giorgi Barishvili.pdf"
-              download="Giorgi Barishvili CV"
-              target="_blank"
-            >
+            <a className="nav-item" href="Giorgi_Barishvili_CV.pdf" download>
               <button className="mobile-btn">CV</button>
             </a>
           </div>
         )}
         <div className="nav-links me-lg-5 col-md-3 d-flex justify-content-center align-items-center">
-          <div class="form-check form-switch" ref={darkModeSwitchRef}>
+          <div className="form-check form-switch" ref={darkModeSwitchRef}>
             <input
               className="form-check-input me-md-3"
               type="checkbox"

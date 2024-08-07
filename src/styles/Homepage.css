@@ -33,8 +33,6 @@
   height: 200px !important;
 }
 
-
-
 .modal-text {
   display: flex;
   color: #424244;
@@ -151,7 +149,7 @@
   position: relative;
   padding: 10px 20px;
   border: none;
-  background-color: #3498db;
+  background-color: rgba(43, 72, 114, 1);
   color: #fff;
   cursor: pointer;
   overflow: hidden;
@@ -183,7 +181,8 @@
 }
 /* AQ GAVCHERDI */
 @media screen and (max-width: 768px) {
-  .modal-div, .form {
+  .modal-div,
+  .form {
     display: grid;
     justify-content: center;
     justify-items: center;
@@ -193,7 +192,8 @@
   }
 }
 @media screen and (min-width: 320px) and (max-width: 375px) {
-  .form-floating, .input-field {
+  .form-floating,
+  .input-field {
     width: 190px;
   }
 }

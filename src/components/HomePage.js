@@ -94,8 +94,8 @@ function HomePage() {
         </div>
         <Reveal>
           <div className="homeimg ">
-            <img src={InkStain} alt="Ink Stain" class="ink-stain" />
-            <img src={Programmer1} alt="Programmer" class="programmer" />
+            <img src={InkStain} alt="Ink Stain" className="ink-stain" />
+            <img src={Programmer1} alt="Programmer" className="programmer" />
           </div>
           {/* <Programmer className="programmer" /> */}
         </Reveal>
@@ -120,10 +120,7 @@ function HomePage() {
             <div className="col-12 mx-auto">
               <div className="modal-text mt-1">
                 <div className="d-flex align-items-center ab-portfolio col-8">
-                  ზოგადად ჩემი უნარ-ჩვევები შეგიძლია ნახოთ "ჩემს შესახებ"
-                  გვერდზე, ან CV-ში, თუმცა აქ მინდა გითხრათ თუ რომელი
-                  ბიბლიოთეკები და ზოგადად რა ცოდნა გამოვიყენე ამ პორტფოლიოს
-                  შესაქმენლეად!
+                  {t("homeModal")}
                 </div>
                 <ul className="col-4 frameworks-list">
                   <li>Javascript</li>

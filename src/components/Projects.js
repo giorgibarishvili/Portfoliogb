@@ -5,6 +5,7 @@ import "../styles/Projects.css";
 import Astroworld from "../images/astroworld.png";
 import Imedil from "../images/imedil.png";
 import Sapiens from "../images/sapiens.svg";
+import { useTranslation } from "react-i18next";
 
 const pageTransition = {
   in: { opacity: 1, x: 0 },
@@ -12,23 +13,25 @@ const pageTransition = {
 };
 
 function Projects() {
+  const { t } = useTranslation();
+
   const images = [
     {
       original: Astroworld,
       thumbnail: Astroworld,
-      description: "This is the description for the first image",
+      description: t("astroworld"),
       link: "https://giorgibarishvili.github.io/Astroworld/",
     },
     {
       original: Imedil,
       thumbnail: Imedil,
-      description: "This is the description for the second image",
+      description: t("imedil"),
       link: "https://profile.imedil.ge/login/ge",
     },
     {
       original: Sapiens,
       thumbnail: Sapiens,
-      description: "Next project incoming soon... never gonna give you up!",
+      description: t("nextProject"),
     },
   ];
 
@@ -61,11 +64,7 @@ function Projects() {
       transition={{ duration: 0.5 }}
     >
       <div className="d-flex flex-wrap justify-content-center">
-        <div className="mt-5">
-          esaa chemi ramdenime proeqti, romlebic gavakete martom an mimigia
-          monawileoba mis sheqmnashi, titoeuli proeqtis agwera tan dartulia
-          surattan da masze daklikebit shegidzliat gadaxvidet linkze
-        </div>
+        <div className="mt-5">{t("projectsText")}</div>
         <div className="projects mt-5">
           <ImageGallery
             items={images}
