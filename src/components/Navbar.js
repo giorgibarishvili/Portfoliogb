@@ -131,7 +131,7 @@ function Navbar() {
         ref={sideBarRef}
       >
         {!sideBar && (
-          <div className="nav-div ms-md-5 col-xl-8">
+          <div className="nav-div ms-lg-5 col-xl-8">
             <Link className="nav-item" onClick={closeSideBar} to="/">
               <Button
                 className={`me-3 ${activeButton === "home" ? "active" : ""}`}

@@ -9,6 +9,7 @@
   top: 0;
   z-index: 999;
   color: black;
+  justify-content: space-around;
 }
 .github-link svg {
   width: 48px;
