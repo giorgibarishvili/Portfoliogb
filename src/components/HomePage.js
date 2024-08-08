@@ -1,8 +1,6 @@
-// import { Fade } from "react-awesome-reveal";
 import "../styles/Homepage.css";
 import Appear from "./animations/Appear";
 import Reveal from "./animations/Reveal";
-// import { ReactComponent as Programmer } from "../images/computer-programmer.svg";
 import Programmer1 from "../images/programming.png";
 import InkStain from "../images/ink-stain-2.png";
 import { useTranslation } from "react-i18next";
@@ -85,7 +83,7 @@ function HomePage() {
       transition={{ duration: 0.5 }}
     >
       <div className="who-am-i mt-5 mb-5 me-3 ms-3">
-        <div className="greetings">
+        <div className="greetings col-7">
           <Appear>
             {t("greetings")}
             <br />
@@ -97,20 +95,19 @@ function HomePage() {
             <img src={InkStain} alt="Ink Stain" className="ink-stain" />
             <img src={Programmer1} alt="Programmer" className="programmer" />
           </div>
-          {/* <Programmer className="programmer" /> */}
         </Reveal>
       </div>
       <div className="mt-5 mb-5 modal-div me-3 ms-3">
         <div className="pt-5 mb-3">
           <Appear>
-            This is my PORTFOLIO and in case you are wondering
+            {t("myPortf1")}
             <br />
-            how it was created, just click this button below!
+            {t("myPortf2")}
           </Appear>
         </div>
         <Reveal>
           <button className="morph-btn" onClick={() => setOnClose(true)}>
-            modal
+            {t("modalClick")}
           </button>
         </Reveal>
       </div>
@@ -134,26 +131,6 @@ function HomePage() {
                   <li>embla-carousel</li>
                 </ul>
               </div>
-              {/* <div className="mx-auto mt-5 mb-3 d-flex justify-content-center">
-                <div className="col-md-6 d-flex justify-content-end">
-                  <button
-                    className="no-btn me-3"
-                    onClick={() => setOnClose(false)}
-                  >
-                    {t("no")}
-                  </button>
-                </div>
-                <div className="col-md-6 d-flex ">
-                  <button
-                    className="yes-btn"
-                    onClick={() => {
-                      setOnClose(false);
-                    }}
-                  >
-                    {t("yes")}
-                  </button>
-                </div>
-              </div> */}
             </div>
           </div>
         </ModalPop>

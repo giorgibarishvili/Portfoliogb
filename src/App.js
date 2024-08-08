@@ -12,6 +12,7 @@ import About from "./components/About";
 import { AnimatePresence } from "framer-motion";
 import { ToastContainer, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ function App() {
     <Router>
       <Navbar />
       <AnimatedRoutes />
+      <Footer />
       <ToastContainer
         position="bottom-right"
         autoClose={5000}

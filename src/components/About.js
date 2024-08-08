@@ -25,19 +25,19 @@ function About() {
           <Appear>{t("aboutText")}</Appear>
         </div>
       </div>
-      <div className="information mb-5 row">
+      <div className="information pt-4 mb-5 row">
         <div className="about-me mb-2 col-12">{t("techSkills")}</div>
         <div className="ragaca-span">
           <Appear>{t("techText")}</Appear>
         </div>
       </div>
-      <div className="information mb-5 row">
+      <div className="information pt-4 mb-5 row">
         <div className="about-me mb-2 col-12">{t("education")}</div>
         <div className="ragaca-span">
           <Appear>{t("educationText")}</Appear>
         </div>
       </div>
-      <div className="information mb-5 row">
+      <div className="information pt-4 mb-5 row">
         <div className="about-me mb-2 col-12">{t("work")}</div>
         <div className="ragaca-span">
           <Appear>{t("workText")}</Appear>

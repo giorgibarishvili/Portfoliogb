@@ -8,8 +8,6 @@
 }
 .homeimg {
   position: relative;
-  min-width: 150px;
-  max-width: 600px;
 }
 
 .ink-stain {
@@ -99,17 +97,13 @@
   background: transparent;
   border: none;
   position: absolute;
-  /* padding: 0; */
-  /* cursor: pointer; */
 }
-/* 
-.corp-modal-x svg {
-  display: block;
-} */
+
 .ab-portfolio {
   text-align: left;
   text-indent: 10px;
 }
+
 .frameworks-list li {
   list-style: none;
   border: 1px solid rgb(94, 88, 88);
@@ -117,34 +111,7 @@
   margin-bottom: 10px;
   box-shadow: 5px 5px 5px 1px rgb(51, 47, 47);
 }
-/* .morph-btn {
-  position: relative;
-  padding: 10px 20px;
-  border: none;
-  background-color: #3498db;
-  color: #fff;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 50px;
-  box-shadow: 5px 5px 5px 1px rgba(59, 101, 129, 0.9);
-}
 
-.morph-btn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../images/GeorgiaFlag.svg");
-  background-size: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.morph-btn:hover::after {
-  opacity: 0.3;
-} */
 .morph-btn {
   position: relative;
   padding: 10px 20px;
@@ -179,7 +146,7 @@
 .morph-btn:hover {
   transform: scale(0.95);
 }
-/* AQ GAVCHERDI */
+
 @media screen and (max-width: 768px) {
   .modal-div,
   .form {

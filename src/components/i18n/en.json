@@ -23,5 +23,9 @@
   "projectsText": "Here are a few of my projects, a description of each project is attached to the slide with a corresponding image, and you can click on it to see the corresponding page.",
   "astroworld":"This page is made as a thesis. Here you will find the functionality of search and posts, and not only them.",
   "imedil":"While working in 'Imedi L', I have done some modules on this website, and then I worked on the optimization of the whole page.",
-  "nextProject": "Next project coming soon..."
+  "nextProject": "Next project coming soon...",
+  "myPortf1": "This is my PORTFOLIO and in case you are wondering",
+  "myPortf2": "how it was created, just click this button below!",
+  "modalClick": "Click!",
+  "social": "Social Media"
 }

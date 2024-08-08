@@ -63,7 +63,7 @@ function Projects() {
       variants={pageTransition}
       transition={{ duration: 0.5 }}
     >
-      <div className="d-flex flex-wrap justify-content-center">
+      <div className="d-flex flex-wrap justify-content-center mb-4">
         <div className="mt-5">{t("projectsText")}</div>
         <div className="projects mt-5">
           <ImageGallery
