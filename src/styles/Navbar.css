@@ -213,7 +213,7 @@
   }
   .nav-item {
     border-bottom: 2px solid transparent;
-    height: 80px;
+    height: 60px;
     width: 60%;
     text-decoration: none;
   }
@@ -259,6 +259,10 @@
     background: #fff;
     width: 100%;
     transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  .mobile-btn.active::before {
+    background: #fff;
+    width: 100%;
   }
 
   .mobile-btn:hover:after {

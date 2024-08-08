@@ -132,7 +132,7 @@ function Navbar() {
       >
         {!sideBar && (
           <div className="nav-div ms-lg-5 col-xl-8">
-            <Link className="nav-item" onClick={closeSideBar} to="/">
+            <Link onClick={closeSideBar} to="/">
               <Button
                 className={`me-3 ${activeButton === "home" ? "active" : ""}`}
                 onClick={() => handleButtonClick("home")}
@@ -140,7 +140,7 @@ function Navbar() {
                 {t("home")}
               </Button>
             </Link>
-            <Link className="nav-item" onClick={closeSideBar} to="/About">
+            <Link onClick={closeSideBar} to="/About">
               <Button
                 className={`me-3 ${activeButton === "about" ? "active" : ""}`}
                 onClick={() => handleButtonClick("about")}
@@ -148,7 +148,7 @@ function Navbar() {
                 {t("about")}
               </Button>
             </Link>
-            <Link className="nav-item" onClick={closeSideBar} to="/Projects">
+            <Link onClick={closeSideBar} to="/Projects">
               <Button
                 className={`me-3 ${
                   activeButton === "projects" ? "active" : ""
@@ -158,7 +158,7 @@ function Navbar() {
                 {t("projects")}
               </Button>
             </Link>
-            <a className="nav-item" href="Giorgi_Barishvili_CV.pdf" download>
+            <a href="Giorgi_Barishvili_CV.pdf" download>
               <Button>CV</Button>
             </a>
           </div>
@@ -167,7 +167,9 @@ function Navbar() {
           <div className="nav-mobile ms-lg-5 col-xl-8">
             <Link className="nav-item" onClick={closeSideBar} to="/">
               <button
-                className="me-3 mobile-btn"
+                className={`me-3 mobile-btn ${
+                  activeButton === "home" ? "active" : ""
+                }`}
                 onClick={() => handleButtonClick("home")}
               >
                 {t("home")}
@@ -175,7 +177,9 @@ function Navbar() {
             </Link>
             <Link className="nav-item" onClick={closeSideBar} to="/About">
               <button
-                className="me-3 mobile-btn"
+                className={`me-3 mobile-btn ${
+                  activeButton === "about" ? "active" : ""
+                }`}
                 onClick={() => handleButtonClick("about")}
               >
                 {t("about")}
@@ -183,7 +187,9 @@ function Navbar() {
             </Link>
             <Link className="nav-item" onClick={closeSideBar} to="/Projects">
               <button
-                className="me-3 mobile-btn"
+                className={`me-3 mobile-btn ${
+                  activeButton === "projects" ? "active" : ""
+                }`}
                 onClick={() => handleButtonClick("projects")}
               >
                 {t("projects")}

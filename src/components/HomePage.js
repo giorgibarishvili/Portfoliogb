@@ -210,22 +210,22 @@ function HomePage() {
                 </span>
               )}
             </div>
+            <button
+              className="mb-5 morph-btn"
+              type="submit"
+              onClick={fromSubmited}
+            >
+              {isLoading ? (
+                <span
+                  className="spinner-border spinner-border-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              ) : (
+                "Submit"
+              )}
+            </button>
           </Reveal>
-          <button
-            className="mb-5 morph-btn"
-            type="submit"
-            onClick={fromSubmited}
-          >
-            {isLoading ? (
-              <span
-                className="spinner-border spinner-border-sm"
-                role="status"
-                aria-hidden="true"
-              ></span>
-            ) : (
-              "Submit"
-            )}
-          </button>
         </form>
       </div>
     </motion.div>
