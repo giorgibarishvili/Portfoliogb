@@ -14,3 +14,9 @@
   height: 600px;
   object-fit: cover;
 }
+.image-gallery-slide .image-gallery-description {
+  background: rgba(0, 0, 0, 0.9);
+}
+.image-gallery-slides {
+  text-align: start;
+}

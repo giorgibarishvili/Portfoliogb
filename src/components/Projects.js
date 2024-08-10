@@ -5,6 +5,7 @@ import "../styles/Projects.css";
 import Astroworld from "../images/astroworld.png";
 import Imedil from "../images/imedil.png";
 import Sapiens from "../images/sapiens.svg";
+import TbcConcept from "../images/tbcconcept.png";
 import { useTranslation } from "react-i18next";
 
 const pageTransition = {
@@ -27,6 +28,12 @@ function Projects() {
       thumbnail: Imedil,
       description: t("imedil"),
       link: "https://profile.imedil.ge/login/ge",
+    },
+    {
+      original: TbcConcept,
+      thumbnail: TbcConcept,
+      description: t("tbcconcept"),
+      link: "https://tbcconcepttask.netlify.app/",
     },
     {
       original: Sapiens,
