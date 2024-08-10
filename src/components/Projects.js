@@ -78,6 +78,7 @@ function Projects() {
             renderItem={renderItem}
             showFullscreenButton={false}
             autoPlay={true}
+            slideInterval={5000}
           />
         </div>
       </div>
