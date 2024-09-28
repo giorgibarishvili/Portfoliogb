@@ -28,5 +28,6 @@
   "myPortf2": "უბრალოდ დააჭირეთ ამ ღილაკს ქვემოთ!",
   "modalClick": "კლიკ!",
   "social": "სოციალური ქსელები",
-  "tbcconcept": "ეს გვერდი დავალებაა Tbc React კურსისთვის, მხოლოდ html, css და vanilla javascript-ის გამოყენებით."
+  "tbcconcept": "ეს გვერდი დავალებაა Tbc React კურსისთვის, მხოლოდ html, css და vanilla javascript-ის გამოყენებით.",
+  "redBerry": "ეს პროექტი დავალებაა RedBerry კურსისთვის (მობილურის ზომების გარეშე), სახლების გაყიდვა/გაქირავების გვერდი, სადაც გამოყენებულია: React.js, Bootstrap, Redux და სხვა."
 }

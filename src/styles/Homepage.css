@@ -41,57 +41,6 @@
   font-weight: 600;
   line-height: 22px;
 }
-.no-btn {
-  width: 146px;
-  height: 46px;
-  border-radius: 10px;
-  border: 1px solid #163165;
-  background: #fff;
-  color: #163165;
-  font-feature-settings: "case" on;
-  font-family: FiraGO;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  @media screen and (max-width: 768px) {
-    width: 130px;
-  }
-}
-.yes-btn {
-  width: 146px;
-  height: 46px;
-  border-radius: 10px;
-  background: #163165;
-  color: #fff;
-  font-feature-settings: "case" on;
-  font-family: FiraGO;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  border: none;
-  @media screen and (max-width: 768px) {
-    width: 130px;
-  }
-}
-.modal-content {
-  max-width: 954px;
-  max-height: 539px;
-  border-radius: 10px;
-  border: 1px solid #b8b8b8;
-  background: #fff;
-  box-shadow: 3px 4px 10px 0px rgba(219, 219, 219, 0.25);
-  color: #424244;
-  font-family: FiraGO;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  margin-right: auto !important;
-  margin-left: auto !important;
-  max-height: 550px !important;
-}
 .corp-modal-x {
   right: 0.7rem;
   background: transparent;

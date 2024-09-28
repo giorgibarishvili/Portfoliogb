@@ -28,5 +28,6 @@
   "myPortf2": "how it was created, just click this button below!",
   "modalClick": "Click!",
   "social": "Social Media",
-  "tbcconcept": "This page is an assignment for the Tbc React course, using only html, css and vanilla javascript."
+  "tbcconcept": "This page is an assignment for the Tbc React course, using only html, css and vanilla javascript.",
+  "redBerry": "This project is an assignment for the RedBerry course (no responsive), a house sale/rent page using: React.js, Bootstrap, Redux and more."
 }

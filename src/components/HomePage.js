@@ -142,7 +142,7 @@ function HomePage() {
         >
           <Appear>
             {t("messageMe")} <br />
-            {t("myMail")} Barishili2001@gmail.com
+            {t("myMail")} Barishvili2001@gmail.com
           </Appear>
         </div>
         <form className="form ms-md-5 mt-4">
