@@ -29,9 +29,9 @@
 .btn-default:hover,
 .btn-default.active {
   letter-spacing: 0.25em;
-  background: #bd2929;
+  background: #E63946;
   color: white;
-  box-shadow: 0 0 35px #bd2929;
+  box-shadow: 0 0 35px #E63946;
 }
 
 .btn-default::before {
@@ -60,7 +60,7 @@
   left: 80%;
   width: 10px;
   height: 5px;
-  border: 2px solid #bd2929;
+  border: 2px solid #E63946;
   background: #27282c;
   transform: translateX(-50%);
   transition: 0.5s;
@@ -79,7 +79,7 @@
   left: 20%;
   width: 10px;
   height: 5px;
-  border: 2px solid #bd2929;
+  border: 2px solid #E63946;
   background: #27282c;
   transform: translateX(-50%);
   transition: 0.5s;

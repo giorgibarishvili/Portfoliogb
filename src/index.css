@@ -1,10 +1,10 @@
 :root {
-  --color-background: #faf6dd;
+  --color-background: #F1FAEE;
 }
 
 [data-theme="dark"] {
-  --color-background: black;
-  --color-text: white;
+  --color-background: #121212;
+  --color-text: #457B9D;
 }
 body {
   margin: 0;
